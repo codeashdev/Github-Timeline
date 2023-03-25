@@ -56,15 +56,9 @@ const User = () => {
         <div className='grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-8 md:gap-8'>
         
           <div className='custom-card-image mb-6 md:mb-0'>
-            {/* <div className='shadow-xl card image-full'> */}
               <figure>
-                <img src={avatar_url}  alt='UserImage' className="rounded-full opacity-80" />
-              </figure>
-              {/* <div className='card-body justify-end'>
-                <h2 className='card-title mb-0'>{name}</h2>
-                <p className='flex-grow-0'>{login}</p>
-              </div> */}
-            {/* </div> */}
+                <img src={avatar_url}  alt='UserImage' className="rounded-full " />
+              </figure> 
           </div>
 
           <div className='col-span-2'>
