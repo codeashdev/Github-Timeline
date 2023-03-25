@@ -6,7 +6,7 @@ const About = () => {
         A React app to search GitHub profiles and see their repositories timeline.
       </p>
       <p className='text-lg text-gray-400'>
-        Version <span className='text-white'>2.0.0</span>
+        Version <span>2.0.0</span>
       </p>
     </>
   )

@@ -28,13 +28,13 @@ const RepoItem = ({ repo }) => {
           <div className='mr-2 badge  badge-lg bg-[#161B22]'>
             <FaEye className='mr-2' /> {watchers_count}
           </div>
-          <div className={`${forks >= 1 && 'text-green-500'} mr-2 badge badge-lg`}>
+          <div className={`${forks >= 1 && 'text-green-500'} mr-2 badge badge-lg bg-[#161B22]`}>
             <TbGitFork className='mr-2' /> {forks}
           </div>
-          <div className={`${stargazers_count >= 1 && 'text-amber-500'} mr-2 badge  badge-lg`}>
+          <div className={`${stargazers_count >= 1 && 'text-amber-500'} mr-2 badge  badge-lg bg-[#161B22]`}>
             <FaStar className='mr-2' /> {stargazers_count}
           </div>
-          <div className={`${open_issues >= 1 && 'text-red-700'} mr-2 badge  badge-lg`}>
+          <div className={`${open_issues >= 1 && 'text-red-700'} mr-2 badge  badge-lg bg-[#161B22]`}>
             <VscIssues className='mr-2' /> {open_issues}
           </div>
         </div>
