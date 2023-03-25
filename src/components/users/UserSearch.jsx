@@ -41,7 +41,7 @@ const UserSearch = () => {
               />
               <button
                 type='submit'
-                className='absolute top-0 right-0 rounded-l-none w-36 btn btn-lg bg-[#161B22] hover:bg-base-300'
+                className='absolute top-0 right-0 rounded-l-none w-36 btn btn-lg'
               >
                 Find
               </button>

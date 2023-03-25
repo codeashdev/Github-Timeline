@@ -14,10 +14,10 @@ const App = () => {
     <GithubProvider>
       <AlertProvider>
         <Router>
-          <div className='flex flex-col justify-between min-h-screen bg-[#0D1117]'>
+          <div className='flex flex-col justify-between h-screen'>
             <Navbar />
 
-            <main className='container mx-auto px-3 pb-12 bg-[#0D1117]'>
+            <main className='container mx-auto px-3 pb-12'>
               <Routes>
                 <Route
                   path='/'

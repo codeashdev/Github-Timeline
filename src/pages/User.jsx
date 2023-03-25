@@ -89,7 +89,7 @@ const User = () => {
               </div>
             </div>
 
-            <div className='w-full rounded-lg shadow-md bg-[#161B22] stats'>
+            <div className='w-full rounded-lg shadow-md bg-base-100 stats'>
               {location && (
                 <div className='stat'>
                   <div className='stat-title text-md'>Location</div>
@@ -124,10 +124,10 @@ const User = () => {
           </div>
         </div>
 
-        <div className='w-full py-5 mb-6 rounded-lg shadow-md bg-[#161B22] stats'>
+        <div className='w-full py-5 mb-6 rounded-lg shadow-md bg-base-100 stats'>
           <div className='grid grid-cols-1 md:grid-cols-3'>
             <div className='stat'>
-              <div className='stat-figure'>
+              <div className='stat-figure text-[#161B22]'>
                 <FaUsers className='text-3xl md:text-5xl' />
               </div>
               <div className='stat-title pr-5'>Followers</div>
@@ -137,7 +137,7 @@ const User = () => {
             </div>
 
             <div className='stat'>
-              <div className='stat-figure'>
+              <div className='stat-figure text-[#161B22]'>
                 <FaUserFriends className='text-3xl md:text-5xl' />
               </div>
               <div className='stat-title pr-5'>Following</div>
@@ -147,7 +147,7 @@ const User = () => {
             </div>
 
             <div className='stat'> 
-              <div className='stat-figure'>
+              <div className='stat-figure text-[#161B22]'>
                 <FaCodepen className='text-3xl md:text-5xl' />
               </div>
               <div className='stat-title pr-5'>Public Repos</div>
@@ -157,7 +157,7 @@ const User = () => {
             </div>
 
             <div className='stat'>
-              <div className='stat-figure'>
+              <div className='stat-figure text-[#161B22]'>
                 <FaStore className='text-3xl md:text-5xl' />
               </div>
               <div className='stat-title pr-5'>Public Gists</div>

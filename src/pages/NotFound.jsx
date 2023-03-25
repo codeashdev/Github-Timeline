@@ -8,7 +8,7 @@ const NotFound = () => {
         <div className='max-w-lg'>
           <h1 className='text-8xl font-bold mb-8'>404!</h1>
           <p className='text-5xl mb-8'>Page Not Found!</p>
-          <Link className="btn btn-lg bg-[#161B22] hover:bg-base-300" to='/'>
+          <Link className="btn btn-lg bg-[#2A303C]" to='/'>
             <FaHome className='mr-2' />
             Back To Home
           </Link>
