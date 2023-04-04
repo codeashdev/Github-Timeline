@@ -1,0 +1,28 @@
+{
+    "extends": ["airbnb", "plugin:react/recommended"],
+    "plugins": ["import", "jsx-a11y", "react-hooks"],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/function-component-definition": "off",
+      "react/prop-types": 0,
+      "no-unused-vars": "warn",
+      "linebreak-style": 0,
+      "import/prefer-default-export": "off",
+      "camelcase": "off",
+      "quotes": ["error", "double", { "avoidEscape": true }]
+    },
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module"
+      },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "env": {
+        "browser": true
+      }
+  }
+  

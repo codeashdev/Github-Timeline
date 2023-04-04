@@ -1,47 +1,48 @@
-import { useState, useContext } from 'react'
-import GithubContext from '../../context/github/GithubContext'
-import AlertContext from '../../context/alert/AlertContext'
-import { searchUsers } from '../../context/github/GithubActions'
+import React, { useState, useContext } from "react";
+
+import GithubContext from "../../context/github/GithubContext";
+import AlertContext from "../../context/alert/AlertContext";
+import { searchUsers } from "../../context/github/GithubActions";
 
 const UserSearch = () => {
-  const [text, setText] = useState('')
+  const [text, setText] = useState("");
 
-  const { users, dispatch } = useContext(GithubContext)
-  const { setAlert } = useContext(AlertContext)
+  const { users, dispatch } = useContext(GithubContext);
+  const { setAlert } = useContext(AlertContext);
 
-  const handleChange = (e) => setText(e.target.value)
+  const handleChange = (e) => setText(e.target.value);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (text === '') {
-      setAlert('Please enter a user', 'error')
+    if (text === "") {
+      setAlert("Please enter a user", "error");
     } else {
-      dispatch({ type: 'SET_LOADING' })
-      const users = await searchUsers(text)
-      dispatch({ type: 'GET_USERS', payload: users })
-      users.length === 0 &&   setAlert("User dosen't exist!", 'error')
-      setText('')
-     
+      dispatch({ type: "SET_LOADING" });
+      const user = await searchUsers(text);
+      dispatch({ type: "GET_USERS", payload: user });
+      // eslint-disable-next-line no-unused-expressions
+      user.length === 0 && setAlert("User dosen't exist!", "error");
+      setText("");
     }
-  }
+  };
 
   return (
-    <div className='grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8'>
+    <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8">
       <div>
         <form onSubmit={handleSubmit}>
-          <div className='form-control'>
-            <div className='relative'>
+          <div className="form-control">
+            <div className="relative">
               <input
-                type='text'
-                className='w-full pr-40 bg-gray-200 input input-lg text-black'
-                placeholder='Search'
+                type="text"
+                className="w-full pr-40 bg-gray-200 input input-lg text-black"
+                placeholder="Search"
                 value={text}
                 onChange={handleChange}
               />
               <button
-                type='submit'
-                className='absolute top-0 right-0 rounded-l-none w-36 btn btn-lg'
+                type="submit"
+                className="absolute top-0 right-0 rounded-l-none w-36 btn btn-lg"
               >
                 Find
               </button>
@@ -52,15 +53,16 @@ const UserSearch = () => {
       {users.length > 0 && (
         <div>
           <button
-            onClick={() => dispatch({ type: 'CLEAR_USERS' })}
-            className='btn btn-ghost btn-lg'
+            onClick={() => dispatch({ type: "CLEAR_USERS" })}
+            className="btn btn-ghost btn-lg"
+            type="button"
           >
             Clear
           </button>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default UserSearch
+export default UserSearch;
